@@ -1,6 +1,6 @@
 <%--
  * 
- * @author Shengzhao Li
+ * @author zp
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -14,9 +14,9 @@
 
     <meta name="viewport" content="width=device-width,user-scalable=no"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="keywords" content="wdcy.cc"/>
-    <meta name="description" content="wdcy.cc"/>
-    <meta name="author" content="wdcy.cc"/>
+    <meta name="keywords" content="mengcms.cn"/>
+    <meta name="description" content="mengcms.cn"/>
+    <meta name="author" content="mengcms.cn"/>
 
     <title><decorator:title default=""/> - WDCY Oauth</title>
     <decorator:head/>
@@ -29,7 +29,7 @@
 <div>
     <hr/>
     <p>
-        <a href="mailto:monkeyk1987@gmail.com">monkeyk1987@gmail.com</a>, from <a href="http://wdcy.cc" target="_blank">WDCY</a>.
+        <a href="mailto:zhangpdg@gmail.com">zhangpdg@gmail.com</a>, from <a href="http://www.mengcms.cn" target="_blank">MengCMS</a>.
     </p>
 </div>
 </body>

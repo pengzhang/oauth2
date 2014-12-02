@@ -77,12 +77,12 @@
 
     <!--hy mvc-->
     <servlet>
-        <servlet-name>wdcy</servlet-name>
+        <servlet-name>mengcms</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <load-on-startup>2</load-on-startup>
     </servlet>
     <servlet-mapping>
-        <servlet-name>wdcy</servlet-name>
+        <servlet-name>mengcms</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 

@@ -32,17 +32,6 @@
         <access-denied-handler ref="oauth2AccessDeniedHandler"/>
     </http>
 
-    <!--unity http configuration-->
-    <http pattern="/unity/**" create-session="never" entry-point-ref="oauth2AuthenticationEntryPoint"
-          access-decision-manager-ref="oauth2AccessDecisionManager">
-        <anonymous enabled="false"/>
-
-        <intercept-url pattern="/unity/**" access="ROLE_UNITY,SCOPE_READ"/>
-
-        <custom-filter ref="unityResourceServer" before="PRE_AUTH_FILTER"/>
-        <access-denied-handler ref="oauth2AccessDeniedHandler"/>
-    </http>
-
     <!--mobile http configuration-->
     <http pattern="/m/**" create-session="never" entry-point-ref="oauth2AuthenticationEntryPoint"
           access-decision-manager-ref="oauth2AccessDecisionManager">
@@ -59,8 +48,6 @@
         <beans:property name="authenticationManager" ref="oauth2AuthenticationManager"/>
     </beans:bean>
 
-    <!--unity resource server filter-->
-    <oauth2:resource-server id="unityResourceServer" resource-id="unity-resource" token-services-ref="tokenServices"/>
 
     <!--mobile resource server filter-->
     <oauth2:resource-server id="mobileResourceServer" resource-id="mobile-resource" token-services-ref="tokenServices"/>
@@ -80,7 +67,7 @@
 
     <!--</oauth2:client-details-service>-->
 
-    <beans:bean id="clientDetailsService" class="cc.wdcy.domain.oauth.CustomJdbcClientDetailsService">
+    <beans:bean id="clientDetailsService" class="cn.mengcms.domain.oauth.CustomJdbcClientDetailsService">
         <beans:constructor-arg index="0" ref="dataSource"/>
     </beans:bean>
 
@@ -103,7 +90,7 @@
     <!--<oauth2:expression-handler id="oauth2ExpressionHandler"/>-->
     <!--<oauth2:web-expression-handler id="oauth2WebExpressionHandler"/>-->
 
-    <beans:bean id="oauthUserApprovalHandler" class="cc.wdcy.web.oauth.OauthUserApprovalHandler">
+    <beans:bean id="oauthUserApprovalHandler" class="cn.mengcms.web.oauth.OauthUserApprovalHandler">
         <beans:property name="tokenServices" ref="tokenServices"/>
         <beans:property name="oauthService" ref="oauthService"/>
     </beans:bean>
