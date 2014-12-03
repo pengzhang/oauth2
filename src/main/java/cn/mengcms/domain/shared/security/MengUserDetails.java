@@ -36,7 +36,7 @@ public class MengUserDetails implements UserDetails {
      */
     @Override
     public Collection<GrantedAuthority> getAuthorities() {
-        return Arrays.asList(DEFAULT_USER_ROLE, new SimpleGrantedAuthority(ROLE_PREFIX + "UNITY"), new SimpleGrantedAuthority(ROLE_PREFIX + "MOBILE"));
+        return Arrays.asList(DEFAULT_USER_ROLE, new SimpleGrantedAuthority(ROLE_PREFIX + "MOBILE"));
     }
 
     @Override
