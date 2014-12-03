@@ -18,7 +18,7 @@
     <meta name="description" content="mengcms.cn"/>
     <meta name="author" content="mengcms.cn"/>
 
-    <title><decorator:title default=""/> - WDCY Oauth</title>
+    <title><decorator:title default=""/></title>
     <decorator:head/>
 
 </head>
